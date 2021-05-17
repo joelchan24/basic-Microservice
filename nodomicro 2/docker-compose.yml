@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: nodejsservice2
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    
